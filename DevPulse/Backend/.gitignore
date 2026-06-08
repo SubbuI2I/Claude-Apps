@@ -1,0 +1,15 @@
+# Backend .gitignore
+bin/
+obj/
+.vs/
+.vscode/
+*.user
+*.suo
+*.sln.docstates
+.ReSharper*
+packages/
+*.nupkg
+.nuget/
+appsettings.local.json
+.env
+.env.local

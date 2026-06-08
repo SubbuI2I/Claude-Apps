@@ -1,0 +1,13 @@
+bin
+obj
+node_modules
+dist
+.vscode
+.idea
+*.swp
+*.swo
+.DS_Store
+.env.local
+.env.production.local
+*.log
+postgres_data
