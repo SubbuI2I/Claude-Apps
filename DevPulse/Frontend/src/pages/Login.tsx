@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import axios from 'axios';
 import { useAuth } from '../hooks/useAuth';
 
 export default function Login() {
@@ -21,7 +22,14 @@ export default function Login() {
       }
       window.location.href = '/dashboard';
     } catch (err) {
-      setError('Authentication failed');
+      if (axios.isAxiosError(err)) {
+        const message = err.response?.data?.message || err.message;
+        setError(message);
+      } else if (err instanceof Error) {
+        setError(err.message);
+      } else {
+        setError('Authentication failed');
+      }
     }
   };
 
