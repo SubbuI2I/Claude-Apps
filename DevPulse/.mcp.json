@@ -1,0 +1,13 @@
+{
+  "id": "devpulse-local",
+  "name": "DevPulse Local",
+  "description": "Local DevPulse API server for development and testing",
+  "servers": [
+    {
+      "id": "local-api",
+      "name": "DevPulse API",
+      "url": "http://localhost:7294",
+      "type": "http"
+    }
+  ]
+}
